@@ -1,0 +1,259 @@
+/*
+* { border: 1px solid red }
+*/
+body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #159957;
+  background: -webkit-linear-gradient(to right, #155799, #159957);
+  background: linear-gradient(to right, #155799, #159957);
+
+}
+.animation-xo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Monoton', cursive;
+  font-size: 90vh;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+}
+.container {
+  width: 100vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.title-container {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-container h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  letter-spacing: 20px;
+  font-weight: 700;
+}
+#turn {
+  padding: 8px 25px 2px 25pxpx;
+  letter-spacing: normal;
+  font-family: 'Rubik Mono One', sans-serif;
+  margin: 0;
+}
+#turn span {
+  padding: 6px 10px 4px 10px;
+  margin-left: 25px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  user-select: none;
+  animation-duration: 700ms;
+  animation-name: turn;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes turn {
+  from {
+    background-color: #000000;
+  }
+
+  to {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+}
+.play-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tictactoe {
+  width: calc(80% - 20px);
+  height: calc(100% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  opacity: 0.7;
+  border-radius: 50px;
+}
+.boxes {
+    width: calc(60vh + 10px);
+    height: calc(60vh + 20px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-color: #FFFFFF;
+}
+.box {
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    cursor: pointer;
+}
+.box span {
+  color: #FFFFFF;
+  font-size: 15vh;
+  font-family: 'Rubik Mono One', sans-serif;
+  user-select: auto;
+}
+.box-1 { border-radius: 0 0 20px 0; transition: 500ms }
+.box-1:hover { border-radius: 0 0 40px 0; transition: 100ms }
+.box-2 { border-radius: 0 0 20px 20px; transition: 500ms }
+.box-2:hover { border-radius: 0 0 40px 40px; transition: 100ms }
+.box-3 { border-radius: 0 0 0 20px; transition: 500ms }
+.box-3:hover { border-radius: 0 0 0 40px; transition: 100ms }
+.box-4 { border-radius: 0 20px 20px 0; transition: 500ms }
+.box-4:hover { border-radius: 0 40px 40px 0; transition: 100ms }
+.box-5 { border-radius: 20px; transition: 500ms }
+.box-5:hover { border-radius: 40px; transition: none }
+.box-6 { border-radius: 20px 0 0 20px; transition: 500ms }
+.box-6:hover { border-radius: 40px 0 0 40px; transition: 100ms }
+.box-7 { border-radius: 0 20px 0 0; transition: 500ms }
+.box-7:hover { border-radius: 0 40px 0 0; transition: none }
+.box-8 { border-radius: 20px 20px 0 0; transition: 500ms }
+.box-8:hover { border-radius: 40px 40px 0 0; transition: 100ms }
+.box-9 { border-radius: 20px 0 0 0; transition: 500ms }
+.box-9:hover { border-radius: 40px 0 0 0; transition: none }
+.bar-container {
+  width: calc(20% - 10px);
+  height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+.bar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #3a6186;
+  background: -webkit-linear-gradient(to right, #89253e, #3a6186);
+  background: linear-gradient(to right, #89253e, #3a6186);
+  opacity: 0.7;
+}
+.bar-title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  margin: 0;
+}
+.bar-title h2 {
+  font-family: 'Rubik Mono One', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 30px 30px 10px 30px;
+}
+#bar-element__1,
+#bar-element__2,
+#bar-element__3,
+#bar-element__4,
+#bar-element__5,
+#bar-element__6,
+#bar-element__7,
+#bar-element__8,
+#bar-element__9 {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 0;
+  color: #000000;
+  text-shadow: 0 0 5px #FFFFFF;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 12px;
+}
+.bar button {
+  width: 100%;
+  height: 150px;
+  border: none;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-top: 10px solid #000000;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  transition: 1s;
+}
+.bar button:hover {
+  background-color: #000000;
+  border-top: 10px solid #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: none;
+}
+.win-container-1,
+.win-container-2,
+.win-container-3, 
+.win-container-4,
+.win-container-5,
+.win-container-6,
+.win-container-7,
+.win-container-8,
+.win-container-9 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cc2b5e;
+  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
+  background: linear-gradient(to right, #753a88, #cc2b5e);
+  font-family: 'Monoton', cursive;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 30px;
+}
+.win-container-1 { font-size: 140px }
+.win-container-2 { font-size: 160px }
+.win-container-3 { font-size: 180px }
+.win-container-4 { font-size: 200px }
+.win-container-5 { font-size: 220px }
+.win-container-6 { font-size: 240px }
+.win-container-7 { font-size: 260px }
+.win-container-8 { font-size: 280px }
+.win-container-9 { font-size: 300px }
+/*
+  font-family: 'Monoton', cursive;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Rubik Mono One', sans-serif;
+*/
